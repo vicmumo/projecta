@@ -1,0 +1,10 @@
+Bundle-Name: reinstate-api
+Bundle-SymbolicName: ke.co.tamarix.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	ke.co.tamarix.exception,\
+	ke.co.tamarix.model,\
+	ke.co.tamarix.service,\
+	ke.co.tamarix.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../reinstate-service/service.xml

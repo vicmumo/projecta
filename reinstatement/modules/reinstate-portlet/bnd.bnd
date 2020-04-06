@@ -1,0 +1,4 @@
+Bundle-Name: reinstate-portlet
+Bundle-SymbolicName: ke.co.tamarix
+Bundle-Version: 1.0.0
+Export-Package: ke.co.tamarix.constants

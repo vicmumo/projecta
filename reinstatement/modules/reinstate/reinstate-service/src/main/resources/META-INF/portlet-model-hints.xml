@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="ke.co.tamarix.model.Reinstatement">
+		<field name="uuid" type="String" />
+		<field name="reinstatementId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdby" type="long" />
+		<field name="modifiedby" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="branchName" type="String" />
+		<field name="payrollNo" type="String" />
+		<field name="terminationReason" type="String" />
+		<field name="terminationCode" type="String" />
+		<field name="formerBranch" type="String" />
+	</model>
+</model-hints>

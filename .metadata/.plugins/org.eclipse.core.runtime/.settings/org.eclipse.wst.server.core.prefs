@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+module-start-timeout=300000
+runtimes=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<runtimes>\n  <runtime id\="reinstatement" id-set\="true" location\="/home/ochieng/projecta/reinstatement/bundles" name\="reinstatement" runtime-type-id\="com.liferay.ide.server.portal.runtime" timestamp\="0"/>\n</runtimes>\n
