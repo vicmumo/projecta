@@ -5,7 +5,7 @@ import ke.co.tamarix.constants.ReinstatePortletKeys;
 import com.liferay.counter.kernel.service.CounterLocalService;
 import com.liferay.portal.kernel.dao.orm.QueryUtil;
 import com.liferay.portal.kernel.log.Log;
-import com.liferay.portal.kernel.log.LogFactory;
+//import com.liferay.portal.kernel.log.LogFactory;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 import com.liferay.portal.kernel.util.GetterUtil;
@@ -60,6 +60,7 @@ public class ReinstatePortlet extends MVCPortlet {
 	@Reference
 	ReinstatementLocalService reinstatementLocalService;
 	
+	//Show Records
 	@Override
 		public void render(RenderRequest renderRequest, RenderResponse renderResponse)
 				throws IOException, PortletException {

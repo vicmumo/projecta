@@ -7,16 +7,19 @@
  
 <%
     String reinstatementId = renderRequest.getParameter("reinstatementId");
-    String firstName = renderRequest.getParameter("firstName");
-    String lastName = renderRequest.getParameter("lastName");
+	String firstName = renderRequest.getParameter("firstName");
+	String lastName = renderRequest.getParameter("lastName");
     String branchName = renderRequest.getParameter("branchName");
     String payrollNo = renderRequest.getParameter("payrollNo");
     String terminationReason = renderRequest.getParameter("terminationReason");    
     String terminationCode = renderRequest.getParameter("terminationCode");
     String formerBranch = renderRequest.getParameter("formerBranch");
+	
 %>
 <aui:form action="<%= updateReinstatementActionURL %>" method="post" >
-    <aui:input name="reinstatementId" type="hidden" value="<%=Long.parseLong(reinstatementId)%>"/>
+	
+    
+    <aui:input name="reinstatementId" type="text" value="<%=Long.parseLong(reinstatementId)%>"/>
     <aui:input name="firstName" type="text" value="${reinstatement.firstName}"/>
     <aui:input name="lastName" type="text" value="${reinstatement.lastName}"/>
     <aui:input name="branchName" type="text" value="${reinstatement.branchName}" />
@@ -24,6 +27,9 @@
     <aui:input name="terminationReason" type="text" value="${reinstatement.terminationReason}"/> 
     <aui:input name="terminationCode" type="text" value="${reinstatement.terminationCode}"/> 
     <aui:input name="formerBranch" type="text" value="${reinstatement.formerBranch}"/> 
+    
+    
+    
     
     <aui:input type="submit" value="Update" name="update"></aui:input>
 </aui:form>
