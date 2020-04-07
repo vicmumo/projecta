@@ -8,7 +8,9 @@ import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactory;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+import com.liferay.portal.kernel.util.GetterUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
+import com.liferay.portal.kernel.util.Validator;
 
 import java.io.IOException;
 import java.util.List;
@@ -20,6 +22,8 @@ import javax.portlet.PortletException;
 import javax.portlet.ProcessAction;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
+
+//import com.liferay.portal.kernel.util.GetterUtil;
 
 import ke.co.tamarix.service.ReinstatementLocalService;
 
@@ -34,7 +38,7 @@ import ke.co.tamarix.model.Reinstatement;
 @Component(
 	immediate = true,
 	property = {
-		"com.liferay.portlet.display-category=category.sample",
+		"com.liferay.portlet.display-category=reinstatement",
 		"com.liferay.portlet.header-portlet-css=/css/main.css",
 		"com.liferay.portlet.instanceable=true",
 		"javax.portlet.display-name=Reinstate",
@@ -65,6 +69,8 @@ public class ReinstatePortlet extends MVCPortlet {
 			super.render(renderRequest, renderResponse);
 		}
 	
+	
+	//Add
 	@ProcessAction(name = "addReinstatement")
     public void addReinstatement(ActionRequest actionRequest,ActionResponse actionResponse) {
         long reinstatementId = counterLocalService.increment(Reinstatement.class.getName());
@@ -87,6 +93,51 @@ public class ReinstatePortlet extends MVCPortlet {
         reinstatement.setFormerBranch(formerBranch);
         
         reinstatementLocalService.addReinstatement(reinstatement);
+    }
+	
+	//update 
+	@ProcessAction(name = "updateReinstatement")
+    public void updateReinstatement(ActionRequest actionRequest,  ActionResponse actionResponse) {
+        long reinstatementId = ParamUtil.getLong(actionRequest,"reinstatementId", GetterUtil.DEFAULT_LONG);
+        String firstName = ParamUtil.getString(actionRequest, "firstName", GetterUtil.DEFAULT_STRING);
+        String lastName = ParamUtil.getString(actionRequest, "lastName", GetterUtil.DEFAULT_STRING);
+        String branchName = ParamUtil.getString(actionRequest, "branchName", GetterUtil.DEFAULT_STRING);
+        String payrollNo = ParamUtil.getString(actionRequest, "payrollNo", GetterUtil.DEFAULT_STRING);
+        String terminationReason = ParamUtil.getString(actionRequest, "terminationReason", GetterUtil.DEFAULT_STRING);
+        String terminationCode = ParamUtil.getString(actionRequest, "terminationCode", GetterUtil.DEFAULT_STRING);
+        String formerBranch = ParamUtil.getString(actionRequest, "formerBranch", GetterUtil.DEFAULT_STRING);
+        
+        
+        Reinstatement reinstatement = null;
+        try {
+            reinstatement = reinstatementLocalService.getReinstatement(reinstatementId);
+        } catch (Exception e) {
+            log.error(e.getCause(), e);
+        }
+ 
+        if(Validator.isNotNull(reinstatement)) {
+            reinstatement.setFirstName(firstName);
+            reinstatement.setLastName(lastName);
+            reinstatement.setBranchName(branchName);
+            reinstatement.setPayrollNo(payrollNo);
+            reinstatement.setTerminationReason(terminationReason);
+            reinstatement.setTerminationCode(terminationCode);
+            reinstatement.setFormerBranch(formerBranch);
+            
+            
+            reinstatementLocalService.updateReinstatement(reinstatement);
+        }
+    }
+	
+	//Deletehyo 
+    @ProcessAction(name = "deleteReinstatement")
+    public void deleteReinstatement(ActionRequest actionRequest, ActionResponse actionResponse){
+        long reinstatementId = ParamUtil.getLong(actionRequest, "reinstatementId", GetterUtil.DEFAULT_LONG);
+        try {
+            reinstatementLocalService.deleteReinstatement(reinstatementId);
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+        }
     }
 	
 }

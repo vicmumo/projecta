@@ -1,0 +1,12 @@
+#
+#Mon Apr 06 18:37:46 EAT 2020
+classpath=<?xml version\="1.0" encoding\="UTF-8"?>\n<classpath>\n</classpath>\n
+buildScriptPath=build.gradle
+linkedResources=
+subprojectPaths=modules\:modules/reinstate\:modules/reinstate-portlet\:modules/reinstate/reinstate-api\:modules/reinstate/reinstate-service
+managedNatures=org.eclipse.jdt.core.javanature
+hasAutoBuildTasks=false
+gradleVersion=5.6.4
+buildDir=build
+managedBuilders=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><commands/>
+derivedResources=.gradle\:build\:modules/build\:modules/reinstate/build\:modules/reinstate-portlet/build\:modules/reinstate/reinstate-api/build\:modules/reinstate/reinstate-service/build

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.log.Log"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.log.LogFactory"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.log.LogFactoryUtil"/>
+<fullyQualifiedTypeName name="com.liferay.counter.kernel.service.CounterLocalService"/>
+<fullyQualifiedTypeName name="org.osgi.service.component.annotations.Reference"/>
+<fullyQualifiedTypeName name="ke.co.tamarix.service.ReinstatementLocalService"/>
+<fullyQualifiedTypeName name="javax.portlet.ProcessAction"/>
+<fullyQualifiedTypeName name="javax.portlet.ActionRequest"/>
+<fullyQualifiedTypeName name="javax.portlet.ActionResponse"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.ParamUtil"/>
+<fullyQualifiedTypeName name="javax.portlet.RenderRequest"/>
+<fullyQualifiedTypeName name="javax.portlet.RenderResponse"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="javax.portlet.PortletException"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.dao.orm.QueryUtil"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.GetterUtil"/>
+<fullyQualifiedTypeName name="ke.co.tamarix.model.Reinstatement"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.Validator"/>
+</qualifiedTypeNameHistroy>

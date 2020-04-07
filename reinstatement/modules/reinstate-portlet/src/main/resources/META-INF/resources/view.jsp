@@ -28,7 +28,7 @@
     <c:forEach items="${reinstatementList}" var="reinstatement">  
     
         <portlet:renderURL var="updateReinstatementRenderURL">
-            <portlet:param name="mvcPath" value="/update-student.jsp"/>
+            <portlet:param name="mvcPath" value="/update-reinstatement.jsp"/>
             <portlet:param name="enrollmentNo" value="${reinstatement.firstName}"/>
             <portlet:param name="firstName" value="${reinstatement.lastName}"/>
             <portlet:param name="lastName" value="${reinstatement.branchName}"/>
@@ -36,7 +36,7 @@
             <portlet:param name="contactNo" value="${reinstatement.terminationReason}"/>
             <portlet:param name="city" value="${reinstatement.terminationCode}"/>
             <portlet:param name="city" value="${reinstatement.formerBranch}"/>
-            <portlet:param name="studentId" value="${reinstatement.reinstatementId}"/>
+            <portlet:param name="reinstatementId" value="${reinstatement.reinstatementId}"/>
         </portlet:renderURL>
         
         <portlet:actionURL name="deleteReinstatement" var="deleteReinstatementActionURL">
