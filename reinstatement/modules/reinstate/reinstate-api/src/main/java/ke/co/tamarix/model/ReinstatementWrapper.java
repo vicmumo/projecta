@@ -71,6 +71,26 @@ public class ReinstatementWrapper
 		attributes.put("terminationReason", getTerminationReason());
 		attributes.put("terminationCode", getTerminationCode());
 		attributes.put("formerBranch", getFormerBranch());
+		attributes.put("contractId", getContractId());
+		attributes.put("entityId", getEntityId());
+		attributes.put("approvalDate", getApprovalDate());
+		attributes.put("comments", getComments());
+		attributes.put("approverContractNumber", getApproverContractNumber());
+		attributes.put("agentVerdict", getAgentVerdict());
+		attributes.put("agentAction", getAgentAction());
+		attributes.put("processedFlag", getProcessedFlag());
+		attributes.put("errorReason", getErrorReason());
+		attributes.put("assignmentStatus", getAssignmentStatus());
+		attributes.put("capacity", getCapacity());
+		attributes.put("positionId", getPositionId());
+		attributes.put("orgId", getOrgId());
+		attributes.put("historyStartDate", getHistoryStartDate());
+		attributes.put("oldOrgId", getOldOrgId());
+		attributes.put("oldPositionId", getOldPositionId());
+		attributes.put(
+			"contractEffectiveEndDate", getContractEffectiveEndDate());
+		attributes.put("applicationTye", getApplicationTye());
+		attributes.put("applicationCategory", getApplicationCategory());
 
 		return attributes;
 	}
@@ -166,6 +186,123 @@ public class ReinstatementWrapper
 		if (formerBranch != null) {
 			setFormerBranch(formerBranch);
 		}
+
+		String contractId = (String)attributes.get("contractId");
+
+		if (contractId != null) {
+			setContractId(contractId);
+		}
+
+		String entityId = (String)attributes.get("entityId");
+
+		if (entityId != null) {
+			setEntityId(entityId);
+		}
+
+		String approvalDate = (String)attributes.get("approvalDate");
+
+		if (approvalDate != null) {
+			setApprovalDate(approvalDate);
+		}
+
+		String comments = (String)attributes.get("comments");
+
+		if (comments != null) {
+			setComments(comments);
+		}
+
+		String approverContractNumber = (String)attributes.get(
+			"approverContractNumber");
+
+		if (approverContractNumber != null) {
+			setApproverContractNumber(approverContractNumber);
+		}
+
+		String agentVerdict = (String)attributes.get("agentVerdict");
+
+		if (agentVerdict != null) {
+			setAgentVerdict(agentVerdict);
+		}
+
+		String agentAction = (String)attributes.get("agentAction");
+
+		if (agentAction != null) {
+			setAgentAction(agentAction);
+		}
+
+		String processedFlag = (String)attributes.get("processedFlag");
+
+		if (processedFlag != null) {
+			setProcessedFlag(processedFlag);
+		}
+
+		String errorReason = (String)attributes.get("errorReason");
+
+		if (errorReason != null) {
+			setErrorReason(errorReason);
+		}
+
+		String assignmentStatus = (String)attributes.get("assignmentStatus");
+
+		if (assignmentStatus != null) {
+			setAssignmentStatus(assignmentStatus);
+		}
+
+		String capacity = (String)attributes.get("capacity");
+
+		if (capacity != null) {
+			setCapacity(capacity);
+		}
+
+		String positionId = (String)attributes.get("positionId");
+
+		if (positionId != null) {
+			setPositionId(positionId);
+		}
+
+		String orgId = (String)attributes.get("orgId");
+
+		if (orgId != null) {
+			setOrgId(orgId);
+		}
+
+		String historyStartDate = (String)attributes.get("historyStartDate");
+
+		if (historyStartDate != null) {
+			setHistoryStartDate(historyStartDate);
+		}
+
+		String oldOrgId = (String)attributes.get("oldOrgId");
+
+		if (oldOrgId != null) {
+			setOldOrgId(oldOrgId);
+		}
+
+		String oldPositionId = (String)attributes.get("oldPositionId");
+
+		if (oldPositionId != null) {
+			setOldPositionId(oldPositionId);
+		}
+
+		String contractEffectiveEndDate = (String)attributes.get(
+			"contractEffectiveEndDate");
+
+		if (contractEffectiveEndDate != null) {
+			setContractEffectiveEndDate(contractEffectiveEndDate);
+		}
+
+		String applicationTye = (String)attributes.get("applicationTye");
+
+		if (applicationTye != null) {
+			setApplicationTye(applicationTye);
+		}
+
+		String applicationCategory = (String)attributes.get(
+			"applicationCategory");
+
+		if (applicationCategory != null) {
+			setApplicationCategory(applicationCategory);
+		}
 	}
 
 	@Override
@@ -179,6 +316,76 @@ public class ReinstatementWrapper
 	}
 
 	/**
+	 * Returns the agent action of this reinstatement.
+	 *
+	 * @return the agent action of this reinstatement
+	 */
+	@Override
+	public String getAgentAction() {
+		return _reinstatement.getAgentAction();
+	}
+
+	/**
+	 * Returns the agent verdict of this reinstatement.
+	 *
+	 * @return the agent verdict of this reinstatement
+	 */
+	@Override
+	public String getAgentVerdict() {
+		return _reinstatement.getAgentVerdict();
+	}
+
+	/**
+	 * Returns the application category of this reinstatement.
+	 *
+	 * @return the application category of this reinstatement
+	 */
+	@Override
+	public String getApplicationCategory() {
+		return _reinstatement.getApplicationCategory();
+	}
+
+	/**
+	 * Returns the application tye of this reinstatement.
+	 *
+	 * @return the application tye of this reinstatement
+	 */
+	@Override
+	public String getApplicationTye() {
+		return _reinstatement.getApplicationTye();
+	}
+
+	/**
+	 * Returns the approval date of this reinstatement.
+	 *
+	 * @return the approval date of this reinstatement
+	 */
+	@Override
+	public String getApprovalDate() {
+		return _reinstatement.getApprovalDate();
+	}
+
+	/**
+	 * Returns the approver contract number of this reinstatement.
+	 *
+	 * @return the approver contract number of this reinstatement
+	 */
+	@Override
+	public String getApproverContractNumber() {
+		return _reinstatement.getApproverContractNumber();
+	}
+
+	/**
+	 * Returns the assignment status of this reinstatement.
+	 *
+	 * @return the assignment status of this reinstatement
+	 */
+	@Override
+	public String getAssignmentStatus() {
+		return _reinstatement.getAssignmentStatus();
+	}
+
+	/**
 	 * Returns the branch name of this reinstatement.
 	 *
 	 * @return the branch name of this reinstatement
@@ -189,6 +396,26 @@ public class ReinstatementWrapper
 	}
 
 	/**
+	 * Returns the capacity of this reinstatement.
+	 *
+	 * @return the capacity of this reinstatement
+	 */
+	@Override
+	public String getCapacity() {
+		return _reinstatement.getCapacity();
+	}
+
+	/**
+	 * Returns the comments of this reinstatement.
+	 *
+	 * @return the comments of this reinstatement
+	 */
+	@Override
+	public String getComments() {
+		return _reinstatement.getComments();
+	}
+
+	/**
 	 * Returns the company ID of this reinstatement.
 	 *
 	 * @return the company ID of this reinstatement
@@ -196,6 +423,26 @@ public class ReinstatementWrapper
 	@Override
 	public long getCompanyId() {
 		return _reinstatement.getCompanyId();
+	}
+
+	/**
+	 * Returns the contract effective end date of this reinstatement.
+	 *
+	 * @return the contract effective end date of this reinstatement
+	 */
+	@Override
+	public String getContractEffectiveEndDate() {
+		return _reinstatement.getContractEffectiveEndDate();
+	}
+
+	/**
+	 * Returns the contract ID of this reinstatement.
+	 *
+	 * @return the contract ID of this reinstatement
+	 */
+	@Override
+	public String getContractId() {
+		return _reinstatement.getContractId();
 	}
 
 	/**
@@ -216,6 +463,26 @@ public class ReinstatementWrapper
 	@Override
 	public long getCreatedby() {
 		return _reinstatement.getCreatedby();
+	}
+
+	/**
+	 * Returns the entity ID of this reinstatement.
+	 *
+	 * @return the entity ID of this reinstatement
+	 */
+	@Override
+	public String getEntityId() {
+		return _reinstatement.getEntityId();
+	}
+
+	/**
+	 * Returns the error reason of this reinstatement.
+	 *
+	 * @return the error reason of this reinstatement
+	 */
+	@Override
+	public String getErrorReason() {
+		return _reinstatement.getErrorReason();
 	}
 
 	@Override
@@ -254,6 +521,16 @@ public class ReinstatementWrapper
 	}
 
 	/**
+	 * Returns the history start date of this reinstatement.
+	 *
+	 * @return the history start date of this reinstatement
+	 */
+	@Override
+	public String getHistoryStartDate() {
+		return _reinstatement.getHistoryStartDate();
+	}
+
+	/**
 	 * Returns the last name of this reinstatement.
 	 *
 	 * @return the last name of this reinstatement
@@ -284,6 +561,36 @@ public class ReinstatementWrapper
 	}
 
 	/**
+	 * Returns the old org ID of this reinstatement.
+	 *
+	 * @return the old org ID of this reinstatement
+	 */
+	@Override
+	public String getOldOrgId() {
+		return _reinstatement.getOldOrgId();
+	}
+
+	/**
+	 * Returns the old position ID of this reinstatement.
+	 *
+	 * @return the old position ID of this reinstatement
+	 */
+	@Override
+	public String getOldPositionId() {
+		return _reinstatement.getOldPositionId();
+	}
+
+	/**
+	 * Returns the org ID of this reinstatement.
+	 *
+	 * @return the org ID of this reinstatement
+	 */
+	@Override
+	public String getOrgId() {
+		return _reinstatement.getOrgId();
+	}
+
+	/**
 	 * Returns the payroll no of this reinstatement.
 	 *
 	 * @return the payroll no of this reinstatement
@@ -291,6 +598,16 @@ public class ReinstatementWrapper
 	@Override
 	public String getPayrollNo() {
 		return _reinstatement.getPayrollNo();
+	}
+
+	/**
+	 * Returns the position ID of this reinstatement.
+	 *
+	 * @return the position ID of this reinstatement
+	 */
+	@Override
+	public String getPositionId() {
+		return _reinstatement.getPositionId();
 	}
 
 	/**
@@ -306,6 +623,16 @@ public class ReinstatementWrapper
 	@Override
 	public Serializable getPrimaryKeyObj() {
 		return _reinstatement.getPrimaryKeyObj();
+	}
+
+	/**
+	 * Returns the processed flag of this reinstatement.
+	 *
+	 * @return the processed flag of this reinstatement
+	 */
+	@Override
+	public String getProcessedFlag() {
+		return _reinstatement.getProcessedFlag();
 	}
 
 	/**
@@ -374,6 +701,76 @@ public class ReinstatementWrapper
 	}
 
 	/**
+	 * Sets the agent action of this reinstatement.
+	 *
+	 * @param agentAction the agent action of this reinstatement
+	 */
+	@Override
+	public void setAgentAction(String agentAction) {
+		_reinstatement.setAgentAction(agentAction);
+	}
+
+	/**
+	 * Sets the agent verdict of this reinstatement.
+	 *
+	 * @param agentVerdict the agent verdict of this reinstatement
+	 */
+	@Override
+	public void setAgentVerdict(String agentVerdict) {
+		_reinstatement.setAgentVerdict(agentVerdict);
+	}
+
+	/**
+	 * Sets the application category of this reinstatement.
+	 *
+	 * @param applicationCategory the application category of this reinstatement
+	 */
+	@Override
+	public void setApplicationCategory(String applicationCategory) {
+		_reinstatement.setApplicationCategory(applicationCategory);
+	}
+
+	/**
+	 * Sets the application tye of this reinstatement.
+	 *
+	 * @param applicationTye the application tye of this reinstatement
+	 */
+	@Override
+	public void setApplicationTye(String applicationTye) {
+		_reinstatement.setApplicationTye(applicationTye);
+	}
+
+	/**
+	 * Sets the approval date of this reinstatement.
+	 *
+	 * @param approvalDate the approval date of this reinstatement
+	 */
+	@Override
+	public void setApprovalDate(String approvalDate) {
+		_reinstatement.setApprovalDate(approvalDate);
+	}
+
+	/**
+	 * Sets the approver contract number of this reinstatement.
+	 *
+	 * @param approverContractNumber the approver contract number of this reinstatement
+	 */
+	@Override
+	public void setApproverContractNumber(String approverContractNumber) {
+		_reinstatement.setApproverContractNumber(approverContractNumber);
+	}
+
+	/**
+	 * Sets the assignment status of this reinstatement.
+	 *
+	 * @param assignmentStatus the assignment status of this reinstatement
+	 */
+	@Override
+	public void setAssignmentStatus(String assignmentStatus) {
+		_reinstatement.setAssignmentStatus(assignmentStatus);
+	}
+
+	/**
 	 * Sets the branch name of this reinstatement.
 	 *
 	 * @param branchName the branch name of this reinstatement
@@ -389,6 +786,26 @@ public class ReinstatementWrapper
 	}
 
 	/**
+	 * Sets the capacity of this reinstatement.
+	 *
+	 * @param capacity the capacity of this reinstatement
+	 */
+	@Override
+	public void setCapacity(String capacity) {
+		_reinstatement.setCapacity(capacity);
+	}
+
+	/**
+	 * Sets the comments of this reinstatement.
+	 *
+	 * @param comments the comments of this reinstatement
+	 */
+	@Override
+	public void setComments(String comments) {
+		_reinstatement.setComments(comments);
+	}
+
+	/**
 	 * Sets the company ID of this reinstatement.
 	 *
 	 * @param companyId the company ID of this reinstatement
@@ -396,6 +813,26 @@ public class ReinstatementWrapper
 	@Override
 	public void setCompanyId(long companyId) {
 		_reinstatement.setCompanyId(companyId);
+	}
+
+	/**
+	 * Sets the contract effective end date of this reinstatement.
+	 *
+	 * @param contractEffectiveEndDate the contract effective end date of this reinstatement
+	 */
+	@Override
+	public void setContractEffectiveEndDate(String contractEffectiveEndDate) {
+		_reinstatement.setContractEffectiveEndDate(contractEffectiveEndDate);
+	}
+
+	/**
+	 * Sets the contract ID of this reinstatement.
+	 *
+	 * @param contractId the contract ID of this reinstatement
+	 */
+	@Override
+	public void setContractId(String contractId) {
+		_reinstatement.setContractId(contractId);
 	}
 
 	/**
@@ -416,6 +853,26 @@ public class ReinstatementWrapper
 	@Override
 	public void setCreatedby(long createdby) {
 		_reinstatement.setCreatedby(createdby);
+	}
+
+	/**
+	 * Sets the entity ID of this reinstatement.
+	 *
+	 * @param entityId the entity ID of this reinstatement
+	 */
+	@Override
+	public void setEntityId(String entityId) {
+		_reinstatement.setEntityId(entityId);
+	}
+
+	/**
+	 * Sets the error reason of this reinstatement.
+	 *
+	 * @param errorReason the error reason of this reinstatement
+	 */
+	@Override
+	public void setErrorReason(String errorReason) {
+		_reinstatement.setErrorReason(errorReason);
 	}
 
 	@Override
@@ -466,6 +923,16 @@ public class ReinstatementWrapper
 	}
 
 	/**
+	 * Sets the history start date of this reinstatement.
+	 *
+	 * @param historyStartDate the history start date of this reinstatement
+	 */
+	@Override
+	public void setHistoryStartDate(String historyStartDate) {
+		_reinstatement.setHistoryStartDate(historyStartDate);
+	}
+
+	/**
 	 * Sets the last name of this reinstatement.
 	 *
 	 * @param lastName the last name of this reinstatement
@@ -501,6 +968,36 @@ public class ReinstatementWrapper
 	}
 
 	/**
+	 * Sets the old org ID of this reinstatement.
+	 *
+	 * @param oldOrgId the old org ID of this reinstatement
+	 */
+	@Override
+	public void setOldOrgId(String oldOrgId) {
+		_reinstatement.setOldOrgId(oldOrgId);
+	}
+
+	/**
+	 * Sets the old position ID of this reinstatement.
+	 *
+	 * @param oldPositionId the old position ID of this reinstatement
+	 */
+	@Override
+	public void setOldPositionId(String oldPositionId) {
+		_reinstatement.setOldPositionId(oldPositionId);
+	}
+
+	/**
+	 * Sets the org ID of this reinstatement.
+	 *
+	 * @param orgId the org ID of this reinstatement
+	 */
+	@Override
+	public void setOrgId(String orgId) {
+		_reinstatement.setOrgId(orgId);
+	}
+
+	/**
 	 * Sets the payroll no of this reinstatement.
 	 *
 	 * @param payrollNo the payroll no of this reinstatement
@@ -508,6 +1005,16 @@ public class ReinstatementWrapper
 	@Override
 	public void setPayrollNo(String payrollNo) {
 		_reinstatement.setPayrollNo(payrollNo);
+	}
+
+	/**
+	 * Sets the position ID of this reinstatement.
+	 *
+	 * @param positionId the position ID of this reinstatement
+	 */
+	@Override
+	public void setPositionId(String positionId) {
+		_reinstatement.setPositionId(positionId);
 	}
 
 	/**
@@ -523,6 +1030,16 @@ public class ReinstatementWrapper
 	@Override
 	public void setPrimaryKeyObj(Serializable primaryKeyObj) {
 		_reinstatement.setPrimaryKeyObj(primaryKeyObj);
+	}
+
+	/**
+	 * Sets the processed flag of this reinstatement.
+	 *
+	 * @param processedFlag the processed flag of this reinstatement
+	 */
+	@Override
+	public void setProcessedFlag(String processedFlag) {
+		_reinstatement.setProcessedFlag(processedFlag);
 	}
 
 	/**

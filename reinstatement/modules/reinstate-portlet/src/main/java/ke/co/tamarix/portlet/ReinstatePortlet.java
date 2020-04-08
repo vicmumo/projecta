@@ -83,6 +83,28 @@ public class ReinstatePortlet extends MVCPortlet {
         String terminationCode = ParamUtil.getString(actionRequest, "terminationCode");
         String formerBranch = ParamUtil.getString(actionRequest, "formerBranch");
         
+        //New fileds 
+        String contractId = ParamUtil.getString(actionRequest, "contractId");
+        String entityId = ParamUtil.getString(actionRequest, "entityId");
+        String approvalDate = ParamUtil.getString(actionRequest, "approvalDate");
+        String comments = ParamUtil.getString(actionRequest, "comments");
+        String approverContractNumber = ParamUtil.getString(actionRequest, "approverContractNumber");
+        String agentVerdict = ParamUtil.getString(actionRequest, "agentVerdict");
+        String agentAction = ParamUtil.getString(actionRequest, "agentAction");
+        String processedFlag = ParamUtil.getString(actionRequest, "processedFlag");
+        String errorReason = ParamUtil.getString(actionRequest, "errorReason");
+        String assignmentStatus = ParamUtil.getString(actionRequest, "assignmentStatus");
+        String capacity = ParamUtil.getString(actionRequest, "capacity");
+        String positionId = ParamUtil.getString(actionRequest, "positionId");
+        String orgId = ParamUtil.getString(actionRequest, "orgId");
+        String historyStartDate = ParamUtil.getString(actionRequest, "historyStartDate");
+        String oldOrgId = ParamUtil.getString(actionRequest, "oldOrgId");
+        String oldPositionId = ParamUtil.getString(actionRequest, "oldPositionId");
+        String contractEffectiveEndDate = ParamUtil.getString(actionRequest, "contractEffectiveEndDate");
+        String applicationTye = ParamUtil.getString(actionRequest, "applicationTye");
+        String applicationCategory = ParamUtil.getString(actionRequest, "applicationCategory");
+        //test with this if it will show 
+        
         Reinstatement reinstatement = reinstatementLocalService.createReinstatement(reinstatementId);
         reinstatement.setReinstatementId(reinstatementId);
         reinstatement.setFirstName(firstName);
@@ -92,6 +114,27 @@ public class ReinstatePortlet extends MVCPortlet {
         reinstatement.setTerminationReason(terminationReason);
         reinstatement.setTerminationCode(terminationCode);
         reinstatement.setFormerBranch(formerBranch);
+        
+        //New records
+        reinstatement.setContractId(contractId);
+        reinstatement.setEntityId(entityId);
+        reinstatement.setApprovalDate(approvalDate);
+        reinstatement.setComments(comments);
+        reinstatement.setApproverContractNumber(approverContractNumber);
+        reinstatement.setAgentVerdict(agentVerdict);
+        reinstatement.setAgentAction(agentAction);
+        reinstatement.setProcessedFlag(processedFlag);
+        reinstatement.setErrorReason(errorReason);
+        reinstatement.setAssignmentStatus(assignmentStatus);
+        reinstatement.setCapacity(capacity);
+        reinstatement.setPositionId(positionId);
+        reinstatement.setOrgId(orgId);
+        reinstatement.setHistoryStartDate(historyStartDate);
+        reinstatement.setOldOrgId(oldOrgId);
+        reinstatement.setOldPositionId(oldPositionId);
+        reinstatement.setContractEffectiveEndDate(contractEffectiveEndDate);
+        reinstatement.setApplicationTye(applicationTye);
+        reinstatement.setApplicationCategory(applicationCategory);
         
         reinstatementLocalService.addReinstatement(reinstatement);
     }

@@ -23,5 +23,33 @@
 		<column name="terminationReason" type="String" />
 		<column name="terminationCode" type="String" />
 		<column name="formerBranch" type="String" />
+		<!-- New fileds for Transfers and other Apps -->
+		
+		<column name="contractId" type="String" />
+		<column name="entityId" type="String" />
+		<column name="approvalDate" type="String" />
+		<column name="comments" type="String" />
+		<column name="approverContractNumber" type="String" />
+		<column name="agentVerdict" type="String" />
+		<column name="agentAction" type="String" />
+		<column name="processedFlag" type="String" />
+		<column name="errorReason" type="String" />
+		<column name="assignmentStatus" type="String" />
+		<column name="capacity" type="String" />
+		<column name="positionId" type="String" />
+		<column name="orgId" type="String" />
+		<column name="historyStartDate" type="String" />
+		<column name="oldOrgId" type="String" />
+		<column name="oldPositionId" type="String" />
+		<column name="contractEffectiveEndDate" type="String" />	
+		<column name="applicationTye" type="String" />
+		<column name="applicationCategory" type="String" />
+		
+		
+		<!--  End of New fields  -->
+		
+		
+		
+		
 	</entity>
 </service-builder>

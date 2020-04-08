@@ -46,6 +46,26 @@ public class ReinstatementSoap implements Serializable {
 		soapModel.setTerminationReason(model.getTerminationReason());
 		soapModel.setTerminationCode(model.getTerminationCode());
 		soapModel.setFormerBranch(model.getFormerBranch());
+		soapModel.setContractId(model.getContractId());
+		soapModel.setEntityId(model.getEntityId());
+		soapModel.setApprovalDate(model.getApprovalDate());
+		soapModel.setComments(model.getComments());
+		soapModel.setApproverContractNumber(model.getApproverContractNumber());
+		soapModel.setAgentVerdict(model.getAgentVerdict());
+		soapModel.setAgentAction(model.getAgentAction());
+		soapModel.setProcessedFlag(model.getProcessedFlag());
+		soapModel.setErrorReason(model.getErrorReason());
+		soapModel.setAssignmentStatus(model.getAssignmentStatus());
+		soapModel.setCapacity(model.getCapacity());
+		soapModel.setPositionId(model.getPositionId());
+		soapModel.setOrgId(model.getOrgId());
+		soapModel.setHistoryStartDate(model.getHistoryStartDate());
+		soapModel.setOldOrgId(model.getOldOrgId());
+		soapModel.setOldPositionId(model.getOldPositionId());
+		soapModel.setContractEffectiveEndDate(
+			model.getContractEffectiveEndDate());
+		soapModel.setApplicationTye(model.getApplicationTye());
+		soapModel.setApplicationCategory(model.getApplicationCategory());
 
 		return soapModel;
 	}
@@ -219,6 +239,158 @@ public class ReinstatementSoap implements Serializable {
 		_formerBranch = formerBranch;
 	}
 
+	public String getContractId() {
+		return _contractId;
+	}
+
+	public void setContractId(String contractId) {
+		_contractId = contractId;
+	}
+
+	public String getEntityId() {
+		return _entityId;
+	}
+
+	public void setEntityId(String entityId) {
+		_entityId = entityId;
+	}
+
+	public String getApprovalDate() {
+		return _approvalDate;
+	}
+
+	public void setApprovalDate(String approvalDate) {
+		_approvalDate = approvalDate;
+	}
+
+	public String getComments() {
+		return _comments;
+	}
+
+	public void setComments(String comments) {
+		_comments = comments;
+	}
+
+	public String getApproverContractNumber() {
+		return _approverContractNumber;
+	}
+
+	public void setApproverContractNumber(String approverContractNumber) {
+		_approverContractNumber = approverContractNumber;
+	}
+
+	public String getAgentVerdict() {
+		return _agentVerdict;
+	}
+
+	public void setAgentVerdict(String agentVerdict) {
+		_agentVerdict = agentVerdict;
+	}
+
+	public String getAgentAction() {
+		return _agentAction;
+	}
+
+	public void setAgentAction(String agentAction) {
+		_agentAction = agentAction;
+	}
+
+	public String getProcessedFlag() {
+		return _processedFlag;
+	}
+
+	public void setProcessedFlag(String processedFlag) {
+		_processedFlag = processedFlag;
+	}
+
+	public String getErrorReason() {
+		return _errorReason;
+	}
+
+	public void setErrorReason(String errorReason) {
+		_errorReason = errorReason;
+	}
+
+	public String getAssignmentStatus() {
+		return _assignmentStatus;
+	}
+
+	public void setAssignmentStatus(String assignmentStatus) {
+		_assignmentStatus = assignmentStatus;
+	}
+
+	public String getCapacity() {
+		return _capacity;
+	}
+
+	public void setCapacity(String capacity) {
+		_capacity = capacity;
+	}
+
+	public String getPositionId() {
+		return _positionId;
+	}
+
+	public void setPositionId(String positionId) {
+		_positionId = positionId;
+	}
+
+	public String getOrgId() {
+		return _orgId;
+	}
+
+	public void setOrgId(String orgId) {
+		_orgId = orgId;
+	}
+
+	public String getHistoryStartDate() {
+		return _historyStartDate;
+	}
+
+	public void setHistoryStartDate(String historyStartDate) {
+		_historyStartDate = historyStartDate;
+	}
+
+	public String getOldOrgId() {
+		return _oldOrgId;
+	}
+
+	public void setOldOrgId(String oldOrgId) {
+		_oldOrgId = oldOrgId;
+	}
+
+	public String getOldPositionId() {
+		return _oldPositionId;
+	}
+
+	public void setOldPositionId(String oldPositionId) {
+		_oldPositionId = oldPositionId;
+	}
+
+	public String getContractEffectiveEndDate() {
+		return _contractEffectiveEndDate;
+	}
+
+	public void setContractEffectiveEndDate(String contractEffectiveEndDate) {
+		_contractEffectiveEndDate = contractEffectiveEndDate;
+	}
+
+	public String getApplicationTye() {
+		return _applicationTye;
+	}
+
+	public void setApplicationTye(String applicationTye) {
+		_applicationTye = applicationTye;
+	}
+
+	public String getApplicationCategory() {
+		return _applicationCategory;
+	}
+
+	public void setApplicationCategory(String applicationCategory) {
+		_applicationCategory = applicationCategory;
+	}
+
 	private String _uuid;
 	private long _reinstatementId;
 	private long _groupId;
@@ -234,5 +406,24 @@ public class ReinstatementSoap implements Serializable {
 	private String _terminationReason;
 	private String _terminationCode;
 	private String _formerBranch;
+	private String _contractId;
+	private String _entityId;
+	private String _approvalDate;
+	private String _comments;
+	private String _approverContractNumber;
+	private String _agentVerdict;
+	private String _agentAction;
+	private String _processedFlag;
+	private String _errorReason;
+	private String _assignmentStatus;
+	private String _capacity;
+	private String _positionId;
+	private String _orgId;
+	private String _historyStartDate;
+	private String _oldOrgId;
+	private String _oldPositionId;
+	private String _contractEffectiveEndDate;
+	private String _applicationTye;
+	private String _applicationCategory;
 
 }

@@ -79,7 +79,19 @@ public class ReinstatementModelImpl
 		{"firstName", Types.VARCHAR}, {"lastName", Types.VARCHAR},
 		{"branchName", Types.VARCHAR}, {"payrollNo", Types.VARCHAR},
 		{"terminationReason", Types.VARCHAR},
-		{"terminationCode", Types.VARCHAR}, {"formerBranch", Types.VARCHAR}
+		{"terminationCode", Types.VARCHAR}, {"formerBranch", Types.VARCHAR},
+		{"contractId", Types.VARCHAR}, {"entityId", Types.VARCHAR},
+		{"approvalDate", Types.VARCHAR}, {"comments", Types.VARCHAR},
+		{"approverContractNumber", Types.VARCHAR},
+		{"agentVerdict", Types.VARCHAR}, {"agentAction", Types.VARCHAR},
+		{"processedFlag", Types.VARCHAR}, {"errorReason", Types.VARCHAR},
+		{"assignmentStatus", Types.VARCHAR}, {"capacity", Types.VARCHAR},
+		{"positionId", Types.VARCHAR}, {"orgId", Types.VARCHAR},
+		{"historyStartDate", Types.VARCHAR}, {"oldOrgId", Types.VARCHAR},
+		{"oldPositionId", Types.VARCHAR},
+		{"contractEffectiveEndDate", Types.VARCHAR},
+		{"applicationTye", Types.VARCHAR},
+		{"applicationCategory", Types.VARCHAR}
 	};
 
 	public static final Map<String, Integer> TABLE_COLUMNS_MAP =
@@ -101,10 +113,29 @@ public class ReinstatementModelImpl
 		TABLE_COLUMNS_MAP.put("terminationReason", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("terminationCode", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("formerBranch", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("contractId", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("entityId", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("approvalDate", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("comments", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("approverContractNumber", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("agentVerdict", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("agentAction", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("processedFlag", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("errorReason", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("assignmentStatus", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("capacity", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("positionId", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("orgId", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("historyStartDate", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("oldOrgId", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("oldPositionId", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("contractEffectiveEndDate", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("applicationTye", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("applicationCategory", Types.VARCHAR);
 	}
 
 	public static final String TABLE_SQL_CREATE =
-		"create table Reinstatement_Reinstatement (uuid_ VARCHAR(75) null,reinstatementId LONG not null primary key,groupId LONG,companyId LONG,createdby LONG,modifiedby VARCHAR(75) null,createDate DATE null,modifiedDate DATE null,firstName VARCHAR(75) null,lastName VARCHAR(75) null,branchName VARCHAR(75) null,payrollNo VARCHAR(75) null,terminationReason VARCHAR(75) null,terminationCode VARCHAR(75) null,formerBranch VARCHAR(75) null)";
+		"create table Reinstatement_Reinstatement (uuid_ VARCHAR(75) null,reinstatementId LONG not null primary key,groupId LONG,companyId LONG,createdby LONG,modifiedby VARCHAR(75) null,createDate DATE null,modifiedDate DATE null,firstName VARCHAR(75) null,lastName VARCHAR(75) null,branchName VARCHAR(75) null,payrollNo VARCHAR(75) null,terminationReason VARCHAR(75) null,terminationCode VARCHAR(75) null,formerBranch VARCHAR(75) null,contractId VARCHAR(75) null,entityId VARCHAR(75) null,approvalDate VARCHAR(75) null,comments VARCHAR(75) null,approverContractNumber VARCHAR(75) null,agentVerdict VARCHAR(75) null,agentAction VARCHAR(75) null,processedFlag VARCHAR(75) null,errorReason VARCHAR(75) null,assignmentStatus VARCHAR(75) null,capacity VARCHAR(75) null,positionId VARCHAR(75) null,orgId VARCHAR(75) null,historyStartDate VARCHAR(75) null,oldOrgId VARCHAR(75) null,oldPositionId VARCHAR(75) null,contractEffectiveEndDate VARCHAR(75) null,applicationTye VARCHAR(75) null,applicationCategory VARCHAR(75) null)";
 
 	public static final String TABLE_SQL_DROP =
 		"drop table Reinstatement_Reinstatement";
@@ -172,6 +203,26 @@ public class ReinstatementModelImpl
 		model.setTerminationReason(soapModel.getTerminationReason());
 		model.setTerminationCode(soapModel.getTerminationCode());
 		model.setFormerBranch(soapModel.getFormerBranch());
+		model.setContractId(soapModel.getContractId());
+		model.setEntityId(soapModel.getEntityId());
+		model.setApprovalDate(soapModel.getApprovalDate());
+		model.setComments(soapModel.getComments());
+		model.setApproverContractNumber(soapModel.getApproverContractNumber());
+		model.setAgentVerdict(soapModel.getAgentVerdict());
+		model.setAgentAction(soapModel.getAgentAction());
+		model.setProcessedFlag(soapModel.getProcessedFlag());
+		model.setErrorReason(soapModel.getErrorReason());
+		model.setAssignmentStatus(soapModel.getAssignmentStatus());
+		model.setCapacity(soapModel.getCapacity());
+		model.setPositionId(soapModel.getPositionId());
+		model.setOrgId(soapModel.getOrgId());
+		model.setHistoryStartDate(soapModel.getHistoryStartDate());
+		model.setOldOrgId(soapModel.getOldOrgId());
+		model.setOldPositionId(soapModel.getOldPositionId());
+		model.setContractEffectiveEndDate(
+			soapModel.getContractEffectiveEndDate());
+		model.setApplicationTye(soapModel.getApplicationTye());
+		model.setApplicationCategory(soapModel.getApplicationCategory());
 
 		return model;
 	}
@@ -662,6 +713,435 @@ public class ReinstatementModelImpl
 				}
 
 			});
+		attributeGetterFunctions.put(
+			"contractId",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getContractId();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"contractId",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object contractIdObject) {
+
+					reinstatement.setContractId((String)contractIdObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"entityId",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getEntityId();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"entityId",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object entityIdObject) {
+
+					reinstatement.setEntityId((String)entityIdObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"approvalDate",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getApprovalDate();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"approvalDate",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object approvalDateObject) {
+
+					reinstatement.setApprovalDate((String)approvalDateObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"comments",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getComments();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"comments",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object commentsObject) {
+
+					reinstatement.setComments((String)commentsObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"approverContractNumber",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getApproverContractNumber();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"approverContractNumber",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement,
+					Object approverContractNumberObject) {
+
+					reinstatement.setApproverContractNumber(
+						(String)approverContractNumberObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"agentVerdict",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getAgentVerdict();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"agentVerdict",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object agentVerdictObject) {
+
+					reinstatement.setAgentVerdict((String)agentVerdictObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"agentAction",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getAgentAction();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"agentAction",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object agentActionObject) {
+
+					reinstatement.setAgentAction((String)agentActionObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"processedFlag",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getProcessedFlag();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"processedFlag",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object processedFlagObject) {
+
+					reinstatement.setProcessedFlag((String)processedFlagObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"errorReason",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getErrorReason();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"errorReason",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object errorReasonObject) {
+
+					reinstatement.setErrorReason((String)errorReasonObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"assignmentStatus",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getAssignmentStatus();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"assignmentStatus",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement,
+					Object assignmentStatusObject) {
+
+					reinstatement.setAssignmentStatus(
+						(String)assignmentStatusObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"capacity",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getCapacity();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"capacity",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object capacityObject) {
+
+					reinstatement.setCapacity((String)capacityObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"positionId",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getPositionId();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"positionId",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object positionIdObject) {
+
+					reinstatement.setPositionId((String)positionIdObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"orgId",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getOrgId();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"orgId",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object orgIdObject) {
+
+					reinstatement.setOrgId((String)orgIdObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"historyStartDate",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getHistoryStartDate();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"historyStartDate",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement,
+					Object historyStartDateObject) {
+
+					reinstatement.setHistoryStartDate(
+						(String)historyStartDateObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"oldOrgId",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getOldOrgId();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"oldOrgId",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object oldOrgIdObject) {
+
+					reinstatement.setOldOrgId((String)oldOrgIdObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"oldPositionId",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getOldPositionId();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"oldPositionId",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object oldPositionIdObject) {
+
+					reinstatement.setOldPositionId((String)oldPositionIdObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"contractEffectiveEndDate",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getContractEffectiveEndDate();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"contractEffectiveEndDate",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement,
+					Object contractEffectiveEndDateObject) {
+
+					reinstatement.setContractEffectiveEndDate(
+						(String)contractEffectiveEndDateObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"applicationTye",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getApplicationTye();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"applicationTye",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object applicationTyeObject) {
+
+					reinstatement.setApplicationTye(
+						(String)applicationTyeObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"applicationCategory",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getApplicationCategory();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"applicationCategory",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement,
+					Object applicationCategoryObject) {
+
+					reinstatement.setApplicationCategory(
+						(String)applicationCategoryObject);
+				}
+
+			});
 
 		_attributeGetterFunctions = Collections.unmodifiableMap(
 			attributeGetterFunctions);
@@ -919,6 +1399,310 @@ public class ReinstatementModelImpl
 		_formerBranch = formerBranch;
 	}
 
+	@JSON
+	@Override
+	public String getContractId() {
+		if (_contractId == null) {
+			return "";
+		}
+		else {
+			return _contractId;
+		}
+	}
+
+	@Override
+	public void setContractId(String contractId) {
+		_contractId = contractId;
+	}
+
+	@JSON
+	@Override
+	public String getEntityId() {
+		if (_entityId == null) {
+			return "";
+		}
+		else {
+			return _entityId;
+		}
+	}
+
+	@Override
+	public void setEntityId(String entityId) {
+		_entityId = entityId;
+	}
+
+	@JSON
+	@Override
+	public String getApprovalDate() {
+		if (_approvalDate == null) {
+			return "";
+		}
+		else {
+			return _approvalDate;
+		}
+	}
+
+	@Override
+	public void setApprovalDate(String approvalDate) {
+		_approvalDate = approvalDate;
+	}
+
+	@JSON
+	@Override
+	public String getComments() {
+		if (_comments == null) {
+			return "";
+		}
+		else {
+			return _comments;
+		}
+	}
+
+	@Override
+	public void setComments(String comments) {
+		_comments = comments;
+	}
+
+	@JSON
+	@Override
+	public String getApproverContractNumber() {
+		if (_approverContractNumber == null) {
+			return "";
+		}
+		else {
+			return _approverContractNumber;
+		}
+	}
+
+	@Override
+	public void setApproverContractNumber(String approverContractNumber) {
+		_approverContractNumber = approverContractNumber;
+	}
+
+	@JSON
+	@Override
+	public String getAgentVerdict() {
+		if (_agentVerdict == null) {
+			return "";
+		}
+		else {
+			return _agentVerdict;
+		}
+	}
+
+	@Override
+	public void setAgentVerdict(String agentVerdict) {
+		_agentVerdict = agentVerdict;
+	}
+
+	@JSON
+	@Override
+	public String getAgentAction() {
+		if (_agentAction == null) {
+			return "";
+		}
+		else {
+			return _agentAction;
+		}
+	}
+
+	@Override
+	public void setAgentAction(String agentAction) {
+		_agentAction = agentAction;
+	}
+
+	@JSON
+	@Override
+	public String getProcessedFlag() {
+		if (_processedFlag == null) {
+			return "";
+		}
+		else {
+			return _processedFlag;
+		}
+	}
+
+	@Override
+	public void setProcessedFlag(String processedFlag) {
+		_processedFlag = processedFlag;
+	}
+
+	@JSON
+	@Override
+	public String getErrorReason() {
+		if (_errorReason == null) {
+			return "";
+		}
+		else {
+			return _errorReason;
+		}
+	}
+
+	@Override
+	public void setErrorReason(String errorReason) {
+		_errorReason = errorReason;
+	}
+
+	@JSON
+	@Override
+	public String getAssignmentStatus() {
+		if (_assignmentStatus == null) {
+			return "";
+		}
+		else {
+			return _assignmentStatus;
+		}
+	}
+
+	@Override
+	public void setAssignmentStatus(String assignmentStatus) {
+		_assignmentStatus = assignmentStatus;
+	}
+
+	@JSON
+	@Override
+	public String getCapacity() {
+		if (_capacity == null) {
+			return "";
+		}
+		else {
+			return _capacity;
+		}
+	}
+
+	@Override
+	public void setCapacity(String capacity) {
+		_capacity = capacity;
+	}
+
+	@JSON
+	@Override
+	public String getPositionId() {
+		if (_positionId == null) {
+			return "";
+		}
+		else {
+			return _positionId;
+		}
+	}
+
+	@Override
+	public void setPositionId(String positionId) {
+		_positionId = positionId;
+	}
+
+	@JSON
+	@Override
+	public String getOrgId() {
+		if (_orgId == null) {
+			return "";
+		}
+		else {
+			return _orgId;
+		}
+	}
+
+	@Override
+	public void setOrgId(String orgId) {
+		_orgId = orgId;
+	}
+
+	@JSON
+	@Override
+	public String getHistoryStartDate() {
+		if (_historyStartDate == null) {
+			return "";
+		}
+		else {
+			return _historyStartDate;
+		}
+	}
+
+	@Override
+	public void setHistoryStartDate(String historyStartDate) {
+		_historyStartDate = historyStartDate;
+	}
+
+	@JSON
+	@Override
+	public String getOldOrgId() {
+		if (_oldOrgId == null) {
+			return "";
+		}
+		else {
+			return _oldOrgId;
+		}
+	}
+
+	@Override
+	public void setOldOrgId(String oldOrgId) {
+		_oldOrgId = oldOrgId;
+	}
+
+	@JSON
+	@Override
+	public String getOldPositionId() {
+		if (_oldPositionId == null) {
+			return "";
+		}
+		else {
+			return _oldPositionId;
+		}
+	}
+
+	@Override
+	public void setOldPositionId(String oldPositionId) {
+		_oldPositionId = oldPositionId;
+	}
+
+	@JSON
+	@Override
+	public String getContractEffectiveEndDate() {
+		if (_contractEffectiveEndDate == null) {
+			return "";
+		}
+		else {
+			return _contractEffectiveEndDate;
+		}
+	}
+
+	@Override
+	public void setContractEffectiveEndDate(String contractEffectiveEndDate) {
+		_contractEffectiveEndDate = contractEffectiveEndDate;
+	}
+
+	@JSON
+	@Override
+	public String getApplicationTye() {
+		if (_applicationTye == null) {
+			return "";
+		}
+		else {
+			return _applicationTye;
+		}
+	}
+
+	@Override
+	public void setApplicationTye(String applicationTye) {
+		_applicationTye = applicationTye;
+	}
+
+	@JSON
+	@Override
+	public String getApplicationCategory() {
+		if (_applicationCategory == null) {
+			return "";
+		}
+		else {
+			return _applicationCategory;
+		}
+	}
+
+	@Override
+	public void setApplicationCategory(String applicationCategory) {
+		_applicationCategory = applicationCategory;
+	}
+
 	@Override
 	public StagedModelType getStagedModelType() {
 		return new StagedModelType(
@@ -976,6 +1760,27 @@ public class ReinstatementModelImpl
 		reinstatementImpl.setTerminationReason(getTerminationReason());
 		reinstatementImpl.setTerminationCode(getTerminationCode());
 		reinstatementImpl.setFormerBranch(getFormerBranch());
+		reinstatementImpl.setContractId(getContractId());
+		reinstatementImpl.setEntityId(getEntityId());
+		reinstatementImpl.setApprovalDate(getApprovalDate());
+		reinstatementImpl.setComments(getComments());
+		reinstatementImpl.setApproverContractNumber(
+			getApproverContractNumber());
+		reinstatementImpl.setAgentVerdict(getAgentVerdict());
+		reinstatementImpl.setAgentAction(getAgentAction());
+		reinstatementImpl.setProcessedFlag(getProcessedFlag());
+		reinstatementImpl.setErrorReason(getErrorReason());
+		reinstatementImpl.setAssignmentStatus(getAssignmentStatus());
+		reinstatementImpl.setCapacity(getCapacity());
+		reinstatementImpl.setPositionId(getPositionId());
+		reinstatementImpl.setOrgId(getOrgId());
+		reinstatementImpl.setHistoryStartDate(getHistoryStartDate());
+		reinstatementImpl.setOldOrgId(getOldOrgId());
+		reinstatementImpl.setOldPositionId(getOldPositionId());
+		reinstatementImpl.setContractEffectiveEndDate(
+			getContractEffectiveEndDate());
+		reinstatementImpl.setApplicationTye(getApplicationTye());
+		reinstatementImpl.setApplicationCategory(getApplicationCategory());
 
 		reinstatementImpl.resetOriginalValues();
 
@@ -1158,6 +1963,169 @@ public class ReinstatementModelImpl
 			reinstatementCacheModel.formerBranch = null;
 		}
 
+		reinstatementCacheModel.contractId = getContractId();
+
+		String contractId = reinstatementCacheModel.contractId;
+
+		if ((contractId != null) && (contractId.length() == 0)) {
+			reinstatementCacheModel.contractId = null;
+		}
+
+		reinstatementCacheModel.entityId = getEntityId();
+
+		String entityId = reinstatementCacheModel.entityId;
+
+		if ((entityId != null) && (entityId.length() == 0)) {
+			reinstatementCacheModel.entityId = null;
+		}
+
+		reinstatementCacheModel.approvalDate = getApprovalDate();
+
+		String approvalDate = reinstatementCacheModel.approvalDate;
+
+		if ((approvalDate != null) && (approvalDate.length() == 0)) {
+			reinstatementCacheModel.approvalDate = null;
+		}
+
+		reinstatementCacheModel.comments = getComments();
+
+		String comments = reinstatementCacheModel.comments;
+
+		if ((comments != null) && (comments.length() == 0)) {
+			reinstatementCacheModel.comments = null;
+		}
+
+		reinstatementCacheModel.approverContractNumber =
+			getApproverContractNumber();
+
+		String approverContractNumber =
+			reinstatementCacheModel.approverContractNumber;
+
+		if ((approverContractNumber != null) &&
+			(approverContractNumber.length() == 0)) {
+
+			reinstatementCacheModel.approverContractNumber = null;
+		}
+
+		reinstatementCacheModel.agentVerdict = getAgentVerdict();
+
+		String agentVerdict = reinstatementCacheModel.agentVerdict;
+
+		if ((agentVerdict != null) && (agentVerdict.length() == 0)) {
+			reinstatementCacheModel.agentVerdict = null;
+		}
+
+		reinstatementCacheModel.agentAction = getAgentAction();
+
+		String agentAction = reinstatementCacheModel.agentAction;
+
+		if ((agentAction != null) && (agentAction.length() == 0)) {
+			reinstatementCacheModel.agentAction = null;
+		}
+
+		reinstatementCacheModel.processedFlag = getProcessedFlag();
+
+		String processedFlag = reinstatementCacheModel.processedFlag;
+
+		if ((processedFlag != null) && (processedFlag.length() == 0)) {
+			reinstatementCacheModel.processedFlag = null;
+		}
+
+		reinstatementCacheModel.errorReason = getErrorReason();
+
+		String errorReason = reinstatementCacheModel.errorReason;
+
+		if ((errorReason != null) && (errorReason.length() == 0)) {
+			reinstatementCacheModel.errorReason = null;
+		}
+
+		reinstatementCacheModel.assignmentStatus = getAssignmentStatus();
+
+		String assignmentStatus = reinstatementCacheModel.assignmentStatus;
+
+		if ((assignmentStatus != null) && (assignmentStatus.length() == 0)) {
+			reinstatementCacheModel.assignmentStatus = null;
+		}
+
+		reinstatementCacheModel.capacity = getCapacity();
+
+		String capacity = reinstatementCacheModel.capacity;
+
+		if ((capacity != null) && (capacity.length() == 0)) {
+			reinstatementCacheModel.capacity = null;
+		}
+
+		reinstatementCacheModel.positionId = getPositionId();
+
+		String positionId = reinstatementCacheModel.positionId;
+
+		if ((positionId != null) && (positionId.length() == 0)) {
+			reinstatementCacheModel.positionId = null;
+		}
+
+		reinstatementCacheModel.orgId = getOrgId();
+
+		String orgId = reinstatementCacheModel.orgId;
+
+		if ((orgId != null) && (orgId.length() == 0)) {
+			reinstatementCacheModel.orgId = null;
+		}
+
+		reinstatementCacheModel.historyStartDate = getHistoryStartDate();
+
+		String historyStartDate = reinstatementCacheModel.historyStartDate;
+
+		if ((historyStartDate != null) && (historyStartDate.length() == 0)) {
+			reinstatementCacheModel.historyStartDate = null;
+		}
+
+		reinstatementCacheModel.oldOrgId = getOldOrgId();
+
+		String oldOrgId = reinstatementCacheModel.oldOrgId;
+
+		if ((oldOrgId != null) && (oldOrgId.length() == 0)) {
+			reinstatementCacheModel.oldOrgId = null;
+		}
+
+		reinstatementCacheModel.oldPositionId = getOldPositionId();
+
+		String oldPositionId = reinstatementCacheModel.oldPositionId;
+
+		if ((oldPositionId != null) && (oldPositionId.length() == 0)) {
+			reinstatementCacheModel.oldPositionId = null;
+		}
+
+		reinstatementCacheModel.contractEffectiveEndDate =
+			getContractEffectiveEndDate();
+
+		String contractEffectiveEndDate =
+			reinstatementCacheModel.contractEffectiveEndDate;
+
+		if ((contractEffectiveEndDate != null) &&
+			(contractEffectiveEndDate.length() == 0)) {
+
+			reinstatementCacheModel.contractEffectiveEndDate = null;
+		}
+
+		reinstatementCacheModel.applicationTye = getApplicationTye();
+
+		String applicationTye = reinstatementCacheModel.applicationTye;
+
+		if ((applicationTye != null) && (applicationTye.length() == 0)) {
+			reinstatementCacheModel.applicationTye = null;
+		}
+
+		reinstatementCacheModel.applicationCategory = getApplicationCategory();
+
+		String applicationCategory =
+			reinstatementCacheModel.applicationCategory;
+
+		if ((applicationCategory != null) &&
+			(applicationCategory.length() == 0)) {
+
+			reinstatementCacheModel.applicationCategory = null;
+		}
+
 		return reinstatementCacheModel;
 	}
 
@@ -1252,6 +2220,25 @@ public class ReinstatementModelImpl
 	private String _terminationReason;
 	private String _terminationCode;
 	private String _formerBranch;
+	private String _contractId;
+	private String _entityId;
+	private String _approvalDate;
+	private String _comments;
+	private String _approverContractNumber;
+	private String _agentVerdict;
+	private String _agentAction;
+	private String _processedFlag;
+	private String _errorReason;
+	private String _assignmentStatus;
+	private String _capacity;
+	private String _positionId;
+	private String _orgId;
+	private String _historyStartDate;
+	private String _oldOrgId;
+	private String _oldPositionId;
+	private String _contractEffectiveEndDate;
+	private String _applicationTye;
+	private String _applicationCategory;
 	private long _columnBitmask;
 	private Reinstatement _escapedModel;
 

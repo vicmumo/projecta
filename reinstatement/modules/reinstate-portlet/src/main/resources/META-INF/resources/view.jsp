@@ -23,6 +23,9 @@
         <th>Termination Reason</th>
         <th>Termination Code</th>
         <th>Former Branch</th>
+        <th>Contract id</th>
+        <th>Entity id</th>
+        <th>Approval Date</th>
         <th colspan="2" style="width: 100px">Action</th>
     </tr>
     <c:forEach items="${reinstatementList}" var="reinstatement">  
@@ -36,6 +39,28 @@
             <portlet:param name="terminationReason" value="${reinstatement.terminationReason}"/>
             <portlet:param name="terminationCode" value="${reinstatement.terminationCode}"/>
             <portlet:param name="formerBranch" value="${reinstatement.formerBranch}"/>
+            <!-- New records -->
+            <portlet:param name="contractId" value="${reinstatement.contractId}"/>
+            <portlet:param name="entityId" value="${reinstatement.entityId}"/>
+            <portlet:param name="approvalDate" value="${reinstatement.approvalDate}"/>
+            <portlet:param name="comments" value="${reinstatement.comments}"/>
+            <portlet:param name="approverContractNumber" value="${reinstatement.approverContractNumber}"/>
+            <portlet:param name="agentVerdict" value="${reinstatement.agentVerdict}"/>
+            <portlet:param name="agentAction" value="${reinstatement.agentAction}"/>
+            <portlet:param name="processedFlag" value="${reinstatement.processedFlag}"/>
+            <portlet:param name="errorReason" value="${reinstatement.errorReason}"/>
+            <portlet:param name="assignmentStatus" value="${reinstatement.assignmentStatus}"/>
+            <portlet:param name="capacity" value="${reinstatement.capacity}"/>
+            <portlet:param name="positionId" value="${reinstatement.positionId}"/>
+            <portlet:param name="orgId" value="${reinstatement.orgId}"/>
+            <portlet:param name="historyStartDate" value="${reinstatement.historyStartDate}"/>
+            <portlet:param name="oldOrgId" value="${reinstatement.oldOrgId}"/>
+            <portlet:param name="oldPositionId" value="${reinstatement.oldPositionId}"/>
+            <portlet:param name="contractEffectiveEndDate" value="${reinstatement.contractEffectiveEndDate}"/>
+            <portlet:param name="applicationTye" value="${reinstatement.applicationTye}"/>
+            <portlet:param name="applicationCategory" value="${reinstatement.applicationCategory}"/>
+            
+            <!--  End of new records -->
             <portlet:param name="reinstatementId" value="${reinstatement.reinstatementId}"/>
         </portlet:renderURL>
         
@@ -51,6 +76,9 @@
             <td>${reinstatement.getTerminationReason()}</td>
             <td>${reinstatement.getTerminationCode()}</td>
             <td>${reinstatement.getFormerBranch()}</td>
+            <td>${reinstatement.getContractId()}</td>
+            <td>${reinstatement.getEntityId()}</td>
+            <td>${reinstatement.getApprovalDate()}</td>
             <td class="text-center" style="width: 50px">
                 <a href="<%=updateReinstatementRenderURL%>" class="btn  btn-primary btn-default btn-sm px-2 py-1" >
                 <i class ="glyphicon glyphicon-edit"></i>

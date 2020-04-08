@@ -35,5 +35,87 @@
          <aui:validator name="required"/>
          <aui:validator name="string"/>
     </aui:input>  
+    
+    
+    <!--  New records -->
+    <aui:input name="contractId">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="entityId">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="approvalDate">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="comments">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="approverContractNumber">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="agentVerdict">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="agentAction">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="processedFlag">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="errorReason">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="assignmentStatus">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="capacity">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="PayslipLayout">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="orgId">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="historyStartDate">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="oldOrgId">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="oldPositionId">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="contractEffectiveEndDate">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="applicationTye">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <aui:input name="applicationCategory">
+         <aui:validator name="required"/>
+         <aui:validator name="string"/>
+    </aui:input>
+    <!--  end of new records -->
+    
+    
     <aui:button type="submit" name="" value="Submit"></aui:button>
 </aui:form>

@@ -305,3 +305,44 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY org.apache.ivyde.eclipse 1 0 2020-04-07 09:55:18.804
 !MESSAGE IvyDE plugin started
+!SESSION 2020-04-08 10:45:40.454 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_242
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-08 10:45:47.416
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.wakatime.eclipse.plugin 1 0 2020-04-08 10:46:09.451
+!MESSAGE wakatime-cli is up to date.
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2020-04-08 10:46:17.442
+!MESSAGE starting IvyDE plugin
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2020-04-08 10:46:17.497
+!MESSAGE IvyDE plugin started
+!SESSION 2020-04-08 22:50:08.698 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_242
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-04-08 22:55:48.624
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.wakatime.eclipse.plugin 1 0 2020-04-08 22:56:07.400
+!MESSAGE wakatime-cli is up to date.
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2020-04-08 23:05:49.697
+!MESSAGE starting IvyDE plugin
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2020-04-08 23:05:49.721
+!MESSAGE IvyDE plugin started
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2020-04-08 23:35:16.549
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.

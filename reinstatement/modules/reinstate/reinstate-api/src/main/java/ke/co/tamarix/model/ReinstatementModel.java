@@ -290,6 +290,291 @@ public interface ReinstatementModel
 	 */
 	public void setFormerBranch(String formerBranch);
 
+	/**
+	 * Returns the contract ID of this reinstatement.
+	 *
+	 * @return the contract ID of this reinstatement
+	 */
+	@AutoEscape
+	public String getContractId();
+
+	/**
+	 * Sets the contract ID of this reinstatement.
+	 *
+	 * @param contractId the contract ID of this reinstatement
+	 */
+	public void setContractId(String contractId);
+
+	/**
+	 * Returns the entity ID of this reinstatement.
+	 *
+	 * @return the entity ID of this reinstatement
+	 */
+	@AutoEscape
+	public String getEntityId();
+
+	/**
+	 * Sets the entity ID of this reinstatement.
+	 *
+	 * @param entityId the entity ID of this reinstatement
+	 */
+	public void setEntityId(String entityId);
+
+	/**
+	 * Returns the approval date of this reinstatement.
+	 *
+	 * @return the approval date of this reinstatement
+	 */
+	@AutoEscape
+	public String getApprovalDate();
+
+	/**
+	 * Sets the approval date of this reinstatement.
+	 *
+	 * @param approvalDate the approval date of this reinstatement
+	 */
+	public void setApprovalDate(String approvalDate);
+
+	/**
+	 * Returns the comments of this reinstatement.
+	 *
+	 * @return the comments of this reinstatement
+	 */
+	@AutoEscape
+	public String getComments();
+
+	/**
+	 * Sets the comments of this reinstatement.
+	 *
+	 * @param comments the comments of this reinstatement
+	 */
+	public void setComments(String comments);
+
+	/**
+	 * Returns the approver contract number of this reinstatement.
+	 *
+	 * @return the approver contract number of this reinstatement
+	 */
+	@AutoEscape
+	public String getApproverContractNumber();
+
+	/**
+	 * Sets the approver contract number of this reinstatement.
+	 *
+	 * @param approverContractNumber the approver contract number of this reinstatement
+	 */
+	public void setApproverContractNumber(String approverContractNumber);
+
+	/**
+	 * Returns the agent verdict of this reinstatement.
+	 *
+	 * @return the agent verdict of this reinstatement
+	 */
+	@AutoEscape
+	public String getAgentVerdict();
+
+	/**
+	 * Sets the agent verdict of this reinstatement.
+	 *
+	 * @param agentVerdict the agent verdict of this reinstatement
+	 */
+	public void setAgentVerdict(String agentVerdict);
+
+	/**
+	 * Returns the agent action of this reinstatement.
+	 *
+	 * @return the agent action of this reinstatement
+	 */
+	@AutoEscape
+	public String getAgentAction();
+
+	/**
+	 * Sets the agent action of this reinstatement.
+	 *
+	 * @param agentAction the agent action of this reinstatement
+	 */
+	public void setAgentAction(String agentAction);
+
+	/**
+	 * Returns the processed flag of this reinstatement.
+	 *
+	 * @return the processed flag of this reinstatement
+	 */
+	@AutoEscape
+	public String getProcessedFlag();
+
+	/**
+	 * Sets the processed flag of this reinstatement.
+	 *
+	 * @param processedFlag the processed flag of this reinstatement
+	 */
+	public void setProcessedFlag(String processedFlag);
+
+	/**
+	 * Returns the error reason of this reinstatement.
+	 *
+	 * @return the error reason of this reinstatement
+	 */
+	@AutoEscape
+	public String getErrorReason();
+
+	/**
+	 * Sets the error reason of this reinstatement.
+	 *
+	 * @param errorReason the error reason of this reinstatement
+	 */
+	public void setErrorReason(String errorReason);
+
+	/**
+	 * Returns the assignment status of this reinstatement.
+	 *
+	 * @return the assignment status of this reinstatement
+	 */
+	@AutoEscape
+	public String getAssignmentStatus();
+
+	/**
+	 * Sets the assignment status of this reinstatement.
+	 *
+	 * @param assignmentStatus the assignment status of this reinstatement
+	 */
+	public void setAssignmentStatus(String assignmentStatus);
+
+	/**
+	 * Returns the capacity of this reinstatement.
+	 *
+	 * @return the capacity of this reinstatement
+	 */
+	@AutoEscape
+	public String getCapacity();
+
+	/**
+	 * Sets the capacity of this reinstatement.
+	 *
+	 * @param capacity the capacity of this reinstatement
+	 */
+	public void setCapacity(String capacity);
+
+	/**
+	 * Returns the position ID of this reinstatement.
+	 *
+	 * @return the position ID of this reinstatement
+	 */
+	@AutoEscape
+	public String getPositionId();
+
+	/**
+	 * Sets the position ID of this reinstatement.
+	 *
+	 * @param positionId the position ID of this reinstatement
+	 */
+	public void setPositionId(String positionId);
+
+	/**
+	 * Returns the org ID of this reinstatement.
+	 *
+	 * @return the org ID of this reinstatement
+	 */
+	@AutoEscape
+	public String getOrgId();
+
+	/**
+	 * Sets the org ID of this reinstatement.
+	 *
+	 * @param orgId the org ID of this reinstatement
+	 */
+	public void setOrgId(String orgId);
+
+	/**
+	 * Returns the history start date of this reinstatement.
+	 *
+	 * @return the history start date of this reinstatement
+	 */
+	@AutoEscape
+	public String getHistoryStartDate();
+
+	/**
+	 * Sets the history start date of this reinstatement.
+	 *
+	 * @param historyStartDate the history start date of this reinstatement
+	 */
+	public void setHistoryStartDate(String historyStartDate);
+
+	/**
+	 * Returns the old org ID of this reinstatement.
+	 *
+	 * @return the old org ID of this reinstatement
+	 */
+	@AutoEscape
+	public String getOldOrgId();
+
+	/**
+	 * Sets the old org ID of this reinstatement.
+	 *
+	 * @param oldOrgId the old org ID of this reinstatement
+	 */
+	public void setOldOrgId(String oldOrgId);
+
+	/**
+	 * Returns the old position ID of this reinstatement.
+	 *
+	 * @return the old position ID of this reinstatement
+	 */
+	@AutoEscape
+	public String getOldPositionId();
+
+	/**
+	 * Sets the old position ID of this reinstatement.
+	 *
+	 * @param oldPositionId the old position ID of this reinstatement
+	 */
+	public void setOldPositionId(String oldPositionId);
+
+	/**
+	 * Returns the contract effective end date of this reinstatement.
+	 *
+	 * @return the contract effective end date of this reinstatement
+	 */
+	@AutoEscape
+	public String getContractEffectiveEndDate();
+
+	/**
+	 * Sets the contract effective end date of this reinstatement.
+	 *
+	 * @param contractEffectiveEndDate the contract effective end date of this reinstatement
+	 */
+	public void setContractEffectiveEndDate(String contractEffectiveEndDate);
+
+	/**
+	 * Returns the application tye of this reinstatement.
+	 *
+	 * @return the application tye of this reinstatement
+	 */
+	@AutoEscape
+	public String getApplicationTye();
+
+	/**
+	 * Sets the application tye of this reinstatement.
+	 *
+	 * @param applicationTye the application tye of this reinstatement
+	 */
+	public void setApplicationTye(String applicationTye);
+
+	/**
+	 * Returns the application category of this reinstatement.
+	 *
+	 * @return the application category of this reinstatement
+	 */
+	@AutoEscape
+	public String getApplicationCategory();
+
+	/**
+	 * Sets the application category of this reinstatement.
+	 *
+	 * @param applicationCategory the application category of this reinstatement
+	 */
+	public void setApplicationCategory(String applicationCategory);
+
 	@Override
 	public boolean isNew();
 

@@ -17,5 +17,24 @@
 		<field name="terminationReason" type="String" />
 		<field name="terminationCode" type="String" />
 		<field name="formerBranch" type="String" />
+		<field name="contractId" type="String" />
+		<field name="entityId" type="String" />
+		<field name="approvalDate" type="String" />
+		<field name="comments" type="String" />
+		<field name="approverContractNumber" type="String" />
+		<field name="agentVerdict" type="String" />
+		<field name="agentAction" type="String" />
+		<field name="processedFlag" type="String" />
+		<field name="errorReason" type="String" />
+		<field name="assignmentStatus" type="String" />
+		<field name="capacity" type="String" />
+		<field name="positionId" type="String" />
+		<field name="orgId" type="String" />
+		<field name="historyStartDate" type="String" />
+		<field name="oldOrgId" type="String" />
+		<field name="oldPositionId" type="String" />
+		<field name="contractEffectiveEndDate" type="String" />
+		<field name="applicationTye" type="String" />
+		<field name="applicationCategory" type="String" />
 	</model>
 </model-hints>
