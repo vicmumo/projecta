@@ -1,3 +1,5 @@
 INDEX VERSION 1.131
 /home/ochieng/projecta/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4019548635.index
 /reinstate-portlet/src/main/java
+/home/ochieng/projecta/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4169724735.index
+/reinstate-portlet/src/main/java

@@ -66,6 +66,8 @@ public class ReinstatementSoap implements Serializable {
 			model.getContractEffectiveEndDate());
 		soapModel.setApplicationTye(model.getApplicationTye());
 		soapModel.setApplicationCategory(model.getApplicationCategory());
+		soapModel.setFirstapprover(model.getFirstapprover());
+		soapModel.setSecondapprover(model.getSecondapprover());
 
 		return soapModel;
 	}
@@ -391,6 +393,22 @@ public class ReinstatementSoap implements Serializable {
 		_applicationCategory = applicationCategory;
 	}
 
+	public String getFirstapprover() {
+		return _firstapprover;
+	}
+
+	public void setFirstapprover(String firstapprover) {
+		_firstapprover = firstapprover;
+	}
+
+	public String getSecondapprover() {
+		return _secondapprover;
+	}
+
+	public void setSecondapprover(String secondapprover) {
+		_secondapprover = secondapprover;
+	}
+
 	private String _uuid;
 	private long _reinstatementId;
 	private long _groupId;
@@ -425,5 +443,7 @@ public class ReinstatementSoap implements Serializable {
 	private String _contractEffectiveEndDate;
 	private String _applicationTye;
 	private String _applicationCategory;
+	private String _firstapprover;
+	private String _secondapprover;
 
 }

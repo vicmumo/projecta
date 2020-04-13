@@ -36,5 +36,7 @@
 		<field name="contractEffectiveEndDate" type="String" />
 		<field name="applicationTye" type="String" />
 		<field name="applicationCategory" type="String" />
+		<field name="firstapprover" type="String" />
+		<field name="secondapprover" type="String" />
 	</model>
 </model-hints>

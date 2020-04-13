@@ -8,6 +8,11 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="This is the validation"/>
+			<item value="stage"/>
+			<item value="update-reinstatement"/>
+			<item value="update"/>
+			<item value="delete"/>
 			<item value="stude"/>
 			<item value="student"/>
 			<item value="new"/>

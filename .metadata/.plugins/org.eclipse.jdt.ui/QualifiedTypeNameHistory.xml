@@ -9,15 +9,16 @@
 <fullyQualifiedTypeName name="javax.portlet.ProcessAction"/>
 <fullyQualifiedTypeName name="javax.portlet.ActionRequest"/>
 <fullyQualifiedTypeName name="javax.portlet.ActionResponse"/>
-<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.ParamUtil"/>
-<fullyQualifiedTypeName name="javax.portlet.RenderRequest"/>
-<fullyQualifiedTypeName name="javax.portlet.RenderResponse"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="javax.portlet.PortletException"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.dao.orm.QueryUtil"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.util.GetterUtil"/>
-<fullyQualifiedTypeName name="ke.co.tamarix.model.Reinstatement"/>
 <fullyQualifiedTypeName name="com.liferay.portal.kernel.util.Validator"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.liferay.portal.kernel.util.ParamUtil"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="javax.portlet.RenderResponse"/>
+<fullyQualifiedTypeName name="javax.portlet.RenderRequest"/>
+<fullyQualifiedTypeName name="ke.co.tamarix.model.Reinstatement"/>
 </qualifiedTypeNameHistroy>

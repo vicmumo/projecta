@@ -63,7 +63,7 @@ public class ReinstatementCacheModel
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(69);
+		StringBundler sb = new StringBundler(73);
 
 		sb.append("{uuid=");
 		sb.append(uuid);
@@ -133,6 +133,10 @@ public class ReinstatementCacheModel
 		sb.append(applicationTye);
 		sb.append(", applicationCategory=");
 		sb.append(applicationCategory);
+		sb.append(", firstapprover=");
+		sb.append(firstapprover);
+		sb.append(", secondapprover=");
+		sb.append(secondapprover);
 		sb.append("}");
 
 		return sb.toString();
@@ -358,6 +362,20 @@ public class ReinstatementCacheModel
 			reinstatementImpl.setApplicationCategory(applicationCategory);
 		}
 
+		if (firstapprover == null) {
+			reinstatementImpl.setFirstapprover("");
+		}
+		else {
+			reinstatementImpl.setFirstapprover(firstapprover);
+		}
+
+		if (secondapprover == null) {
+			reinstatementImpl.setSecondapprover("");
+		}
+		else {
+			reinstatementImpl.setSecondapprover(secondapprover);
+		}
+
 		reinstatementImpl.resetOriginalValues();
 
 		return reinstatementImpl;
@@ -403,6 +421,8 @@ public class ReinstatementCacheModel
 		contractEffectiveEndDate = objectInput.readUTF();
 		applicationTye = objectInput.readUTF();
 		applicationCategory = objectInput.readUTF();
+		firstapprover = objectInput.readUTF();
+		secondapprover = objectInput.readUTF();
 	}
 
 	@Override
@@ -613,6 +633,20 @@ public class ReinstatementCacheModel
 		else {
 			objectOutput.writeUTF(applicationCategory);
 		}
+
+		if (firstapprover == null) {
+			objectOutput.writeUTF("");
+		}
+		else {
+			objectOutput.writeUTF(firstapprover);
+		}
+
+		if (secondapprover == null) {
+			objectOutput.writeUTF("");
+		}
+		else {
+			objectOutput.writeUTF(secondapprover);
+		}
 	}
 
 	public String uuid;
@@ -649,5 +683,7 @@ public class ReinstatementCacheModel
 	public String contractEffectiveEndDate;
 	public String applicationTye;
 	public String applicationCategory;
+	public String firstapprover;
+	public String secondapprover;
 
 }

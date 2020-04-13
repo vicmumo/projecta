@@ -1,0 +1,36 @@
+<%@ include file="init.jsp"%>
+<portlet:defineObjects/>
+ 
+<portlet:actionURL name="updateReinstatement" var="updateReinstatementActionURL"/>
+ 
+<aui:form action="<%=updateReinstatementActionURL%>" name="reinstatementForm" method="POST"/>
+ 
+<%
+    String reinstatementId = renderRequest.getParameter("reinstatementId");
+	String firstName = renderRequest.getParameter("firstName");
+	String lastName = renderRequest.getParameter("lastName");
+    String branchName = renderRequest.getParameter("branchName");
+    String payrollNo = renderRequest.getParameter("payrollNo");
+    String terminationReason = renderRequest.getParameter("terminationReason");    
+    String terminationCode = renderRequest.getParameter("terminationCode");
+    String formerBranch = renderRequest.getParameter("formerBranch");
+	
+%>
+<aui:form action="<%= updateReinstatementActionURL %>" method="post" >
+	
+    <h2>This is 1st approver.</h2>
+    <aui:input name="reinstatementId" type="text" value="<%=Long.parseLong(reinstatementId)%>"/>
+    <aui:input name="firstName" type="text" value="${reinstatement.firstName}"/>
+    <aui:input name="lastName" type="text" value="${reinstatement.lastName}"/>
+    <aui:input name="branchName" type="text" value="${reinstatement.lastName}" />
+    <aui:input name="payrollNo" type="text" value="${reinstatement.payrollNo}" />
+    <aui:input name="terminationReason" type="text" value="${reinstatement.terminationReason}"/> 
+    <aui:input name="terminationCode" type="text" value="${reinstatement.terminationCode}"/> 
+    <aui:input name="formerBranch" type="text" value="${reinstatement.formerBranch}"/>  
+    
+    <aui:input type="submit" value="Approve to the next step.." name="processAction"></aui:input>
+    
+    <hr />
+    <hr />
+    <aui:input type="submit" value="Decline to the next step.." name="update"></aui:input>
+</aui:form>

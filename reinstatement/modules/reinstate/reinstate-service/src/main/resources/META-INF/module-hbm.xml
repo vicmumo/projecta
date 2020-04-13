@@ -40,5 +40,7 @@
 		<property name="contractEffectiveEndDate" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property name="applicationTye" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property name="applicationCategory" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="firstapprover" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="secondapprover" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 	</class>
 </hibernate-mapping>

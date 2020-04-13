@@ -91,6 +91,8 @@ public class ReinstatementWrapper
 			"contractEffectiveEndDate", getContractEffectiveEndDate());
 		attributes.put("applicationTye", getApplicationTye());
 		attributes.put("applicationCategory", getApplicationCategory());
+		attributes.put("firstapprover", getFirstapprover());
+		attributes.put("secondapprover", getSecondapprover());
 
 		return attributes;
 	}
@@ -303,6 +305,18 @@ public class ReinstatementWrapper
 		if (applicationCategory != null) {
 			setApplicationCategory(applicationCategory);
 		}
+
+		String firstapprover = (String)attributes.get("firstapprover");
+
+		if (firstapprover != null) {
+			setFirstapprover(firstapprover);
+		}
+
+		String secondapprover = (String)attributes.get("secondapprover");
+
+		if (secondapprover != null) {
+			setSecondapprover(secondapprover);
+		}
 	}
 
 	@Override
@@ -491,6 +505,16 @@ public class ReinstatementWrapper
 	}
 
 	/**
+	 * Returns the firstapprover of this reinstatement.
+	 *
+	 * @return the firstapprover of this reinstatement
+	 */
+	@Override
+	public String getFirstapprover() {
+		return _reinstatement.getFirstapprover();
+	}
+
+	/**
 	 * Returns the first name of this reinstatement.
 	 *
 	 * @return the first name of this reinstatement
@@ -643,6 +667,16 @@ public class ReinstatementWrapper
 	@Override
 	public long getReinstatementId() {
 		return _reinstatement.getReinstatementId();
+	}
+
+	/**
+	 * Returns the secondapprover of this reinstatement.
+	 *
+	 * @return the secondapprover of this reinstatement
+	 */
+	@Override
+	public String getSecondapprover() {
+		return _reinstatement.getSecondapprover();
 	}
 
 	/**
@@ -893,6 +927,16 @@ public class ReinstatementWrapper
 	}
 
 	/**
+	 * Sets the firstapprover of this reinstatement.
+	 *
+	 * @param firstapprover the firstapprover of this reinstatement
+	 */
+	@Override
+	public void setFirstapprover(String firstapprover) {
+		_reinstatement.setFirstapprover(firstapprover);
+	}
+
+	/**
 	 * Sets the first name of this reinstatement.
 	 *
 	 * @param firstName the first name of this reinstatement
@@ -1050,6 +1094,16 @@ public class ReinstatementWrapper
 	@Override
 	public void setReinstatementId(long reinstatementId) {
 		_reinstatement.setReinstatementId(reinstatementId);
+	}
+
+	/**
+	 * Sets the secondapprover of this reinstatement.
+	 *
+	 * @param secondapprover the secondapprover of this reinstatement
+	 */
+	@Override
+	public void setSecondapprover(String secondapprover) {
+		_reinstatement.setSecondapprover(secondapprover);
 	}
 
 	/**

@@ -91,7 +91,8 @@ public class ReinstatementModelImpl
 		{"oldPositionId", Types.VARCHAR},
 		{"contractEffectiveEndDate", Types.VARCHAR},
 		{"applicationTye", Types.VARCHAR},
-		{"applicationCategory", Types.VARCHAR}
+		{"applicationCategory", Types.VARCHAR},
+		{"firstapprover", Types.VARCHAR}, {"secondapprover", Types.VARCHAR}
 	};
 
 	public static final Map<String, Integer> TABLE_COLUMNS_MAP =
@@ -132,10 +133,12 @@ public class ReinstatementModelImpl
 		TABLE_COLUMNS_MAP.put("contractEffectiveEndDate", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("applicationTye", Types.VARCHAR);
 		TABLE_COLUMNS_MAP.put("applicationCategory", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("firstapprover", Types.VARCHAR);
+		TABLE_COLUMNS_MAP.put("secondapprover", Types.VARCHAR);
 	}
 
 	public static final String TABLE_SQL_CREATE =
-		"create table Reinstatement_Reinstatement (uuid_ VARCHAR(75) null,reinstatementId LONG not null primary key,groupId LONG,companyId LONG,createdby LONG,modifiedby VARCHAR(75) null,createDate DATE null,modifiedDate DATE null,firstName VARCHAR(75) null,lastName VARCHAR(75) null,branchName VARCHAR(75) null,payrollNo VARCHAR(75) null,terminationReason VARCHAR(75) null,terminationCode VARCHAR(75) null,formerBranch VARCHAR(75) null,contractId VARCHAR(75) null,entityId VARCHAR(75) null,approvalDate VARCHAR(75) null,comments VARCHAR(75) null,approverContractNumber VARCHAR(75) null,agentVerdict VARCHAR(75) null,agentAction VARCHAR(75) null,processedFlag VARCHAR(75) null,errorReason VARCHAR(75) null,assignmentStatus VARCHAR(75) null,capacity VARCHAR(75) null,positionId VARCHAR(75) null,orgId VARCHAR(75) null,historyStartDate VARCHAR(75) null,oldOrgId VARCHAR(75) null,oldPositionId VARCHAR(75) null,contractEffectiveEndDate VARCHAR(75) null,applicationTye VARCHAR(75) null,applicationCategory VARCHAR(75) null)";
+		"create table Reinstatement_Reinstatement (uuid_ VARCHAR(75) null,reinstatementId LONG not null primary key,groupId LONG,companyId LONG,createdby LONG,modifiedby VARCHAR(75) null,createDate DATE null,modifiedDate DATE null,firstName VARCHAR(75) null,lastName VARCHAR(75) null,branchName VARCHAR(75) null,payrollNo VARCHAR(75) null,terminationReason VARCHAR(75) null,terminationCode VARCHAR(75) null,formerBranch VARCHAR(75) null,contractId VARCHAR(75) null,entityId VARCHAR(75) null,approvalDate VARCHAR(75) null,comments VARCHAR(75) null,approverContractNumber VARCHAR(75) null,agentVerdict VARCHAR(75) null,agentAction VARCHAR(75) null,processedFlag VARCHAR(75) null,errorReason VARCHAR(75) null,assignmentStatus VARCHAR(75) null,capacity VARCHAR(75) null,positionId VARCHAR(75) null,orgId VARCHAR(75) null,historyStartDate VARCHAR(75) null,oldOrgId VARCHAR(75) null,oldPositionId VARCHAR(75) null,contractEffectiveEndDate VARCHAR(75) null,applicationTye VARCHAR(75) null,applicationCategory VARCHAR(75) null,firstapprover VARCHAR(75) null,secondapprover VARCHAR(75) null)";
 
 	public static final String TABLE_SQL_DROP =
 		"drop table Reinstatement_Reinstatement";
@@ -223,6 +226,8 @@ public class ReinstatementModelImpl
 			soapModel.getContractEffectiveEndDate());
 		model.setApplicationTye(soapModel.getApplicationTye());
 		model.setApplicationCategory(soapModel.getApplicationCategory());
+		model.setFirstapprover(soapModel.getFirstapprover());
+		model.setSecondapprover(soapModel.getSecondapprover());
 
 		return model;
 	}
@@ -1142,6 +1147,51 @@ public class ReinstatementModelImpl
 				}
 
 			});
+		attributeGetterFunctions.put(
+			"firstapprover",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getFirstapprover();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"firstapprover",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object firstapproverObject) {
+
+					reinstatement.setFirstapprover((String)firstapproverObject);
+				}
+
+			});
+		attributeGetterFunctions.put(
+			"secondapprover",
+			new Function<Reinstatement, Object>() {
+
+				@Override
+				public Object apply(Reinstatement reinstatement) {
+					return reinstatement.getSecondapprover();
+				}
+
+			});
+		attributeSetterBiConsumers.put(
+			"secondapprover",
+			new BiConsumer<Reinstatement, Object>() {
+
+				@Override
+				public void accept(
+					Reinstatement reinstatement, Object secondapproverObject) {
+
+					reinstatement.setSecondapprover(
+						(String)secondapproverObject);
+				}
+
+			});
 
 		_attributeGetterFunctions = Collections.unmodifiableMap(
 			attributeGetterFunctions);
@@ -1703,6 +1753,38 @@ public class ReinstatementModelImpl
 		_applicationCategory = applicationCategory;
 	}
 
+	@JSON
+	@Override
+	public String getFirstapprover() {
+		if (_firstapprover == null) {
+			return "";
+		}
+		else {
+			return _firstapprover;
+		}
+	}
+
+	@Override
+	public void setFirstapprover(String firstapprover) {
+		_firstapprover = firstapprover;
+	}
+
+	@JSON
+	@Override
+	public String getSecondapprover() {
+		if (_secondapprover == null) {
+			return "";
+		}
+		else {
+			return _secondapprover;
+		}
+	}
+
+	@Override
+	public void setSecondapprover(String secondapprover) {
+		_secondapprover = secondapprover;
+	}
+
 	@Override
 	public StagedModelType getStagedModelType() {
 		return new StagedModelType(
@@ -1781,6 +1863,8 @@ public class ReinstatementModelImpl
 			getContractEffectiveEndDate());
 		reinstatementImpl.setApplicationTye(getApplicationTye());
 		reinstatementImpl.setApplicationCategory(getApplicationCategory());
+		reinstatementImpl.setFirstapprover(getFirstapprover());
+		reinstatementImpl.setSecondapprover(getSecondapprover());
 
 		reinstatementImpl.resetOriginalValues();
 
@@ -2126,6 +2210,22 @@ public class ReinstatementModelImpl
 			reinstatementCacheModel.applicationCategory = null;
 		}
 
+		reinstatementCacheModel.firstapprover = getFirstapprover();
+
+		String firstapprover = reinstatementCacheModel.firstapprover;
+
+		if ((firstapprover != null) && (firstapprover.length() == 0)) {
+			reinstatementCacheModel.firstapprover = null;
+		}
+
+		reinstatementCacheModel.secondapprover = getSecondapprover();
+
+		String secondapprover = reinstatementCacheModel.secondapprover;
+
+		if ((secondapprover != null) && (secondapprover.length() == 0)) {
+			reinstatementCacheModel.secondapprover = null;
+		}
+
 		return reinstatementCacheModel;
 	}
 
@@ -2239,6 +2339,8 @@ public class ReinstatementModelImpl
 	private String _contractEffectiveEndDate;
 	private String _applicationTye;
 	private String _applicationCategory;
+	private String _firstapprover;
+	private String _secondapprover;
 	private long _columnBitmask;
 	private Reinstatement _escapedModel;
 

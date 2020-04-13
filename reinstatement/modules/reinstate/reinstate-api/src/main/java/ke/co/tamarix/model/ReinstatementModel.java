@@ -575,6 +575,36 @@ public interface ReinstatementModel
 	 */
 	public void setApplicationCategory(String applicationCategory);
 
+	/**
+	 * Returns the firstapprover of this reinstatement.
+	 *
+	 * @return the firstapprover of this reinstatement
+	 */
+	@AutoEscape
+	public String getFirstapprover();
+
+	/**
+	 * Sets the firstapprover of this reinstatement.
+	 *
+	 * @param firstapprover the firstapprover of this reinstatement
+	 */
+	public void setFirstapprover(String firstapprover);
+
+	/**
+	 * Returns the secondapprover of this reinstatement.
+	 *
+	 * @return the secondapprover of this reinstatement
+	 */
+	@AutoEscape
+	public String getSecondapprover();
+
+	/**
+	 * Sets the secondapprover of this reinstatement.
+	 *
+	 * @param secondapprover the secondapprover of this reinstatement
+	 */
+	public void setSecondapprover(String secondapprover);
+
 	@Override
 	public boolean isNew();
 

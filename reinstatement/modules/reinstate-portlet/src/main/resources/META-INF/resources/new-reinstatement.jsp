@@ -38,7 +38,7 @@
     
     
     <!--  New records -->
-    <aui:input name="contractId">
+    <aui:input name="contractId" value="100003">
          <aui:validator name="required"/>
          <aui:validator name="string"/>
     </aui:input>
@@ -110,6 +110,8 @@
          <aui:validator name="required"/>
          <aui:validator name="string"/>
     </aui:input>
+    
+    
     <aui:input name="applicationCategory">
          <aui:validator name="required"/>
          <aui:validator name="string"/>

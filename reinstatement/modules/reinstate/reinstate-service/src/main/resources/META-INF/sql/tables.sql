@@ -32,5 +32,7 @@ create table Reinstatement_Reinstatement (
 	oldPositionId VARCHAR(75) null,
 	contractEffectiveEndDate VARCHAR(75) null,
 	applicationTye VARCHAR(75) null,
-	applicationCategory VARCHAR(75) null
+	applicationCategory VARCHAR(75) null,
+	firstapprover VARCHAR(75) null,
+	secondapprover VARCHAR(75) null
 );

@@ -38,12 +38,12 @@ import ke.co.tamarix.model.Reinstatement;
 @Component(
 	immediate = true,
 	property = {
-		"com.liferay.portlet.display-category=reinstatement",
+		"com.liferay.portlet.display-category=compliance",
 		"com.liferay.portlet.header-portlet-css=/css/main.css",
 		"com.liferay.portlet.instanceable=true",
 		"javax.portlet.display-name=Reinstate",
 		"javax.portlet.init-param.template-path=/",
-		"javax.portlet.init-param.view-template=/view.jsp",
+		"javax.portlet.init-param.view-template=/first-approval.jsp",  //sitch views here to test the first stage validated jsp.
 		"javax.portlet.name=" + ReinstatePortletKeys.REINSTATE,
 		"javax.portlet.resource-bundle=content.Language",
 		"javax.portlet.security-role-ref=power-user,user"
@@ -60,13 +60,17 @@ public class ReinstatePortlet extends MVCPortlet {
 	@Reference
 	ReinstatementLocalService reinstatementLocalService;
 	
-	//Show Records
+	//Show Records all records.
 	@Override
 		public void render(RenderRequest renderRequest, RenderResponse renderResponse)
 				throws IOException, PortletException {
 			// TODO Auto-generated method stub
+		//This is the one for all records
 		List<Reinstatement> reinstatementList = reinstatementLocalService.getReinstatements(QueryUtil.ALL_POS, QueryUtil.ALL_POS);
         renderRequest.setAttribute("reinstatementList", reinstatementList);
+        //this is the one for first-stage-validated.jsp
+        List<Reinstatement> firstvalidatedList1 = reinstatementLocalService.getReinstatements(QueryUtil.ALL_POS, QueryUtil.ALL_POS);
+        renderRequest.setAttribute("firstvalidatedList1", firstvalidatedList1);//sijui kama ina make sense ata.
 			super.render(renderRequest, renderResponse);
 		}
 	
@@ -82,7 +86,6 @@ public class ReinstatePortlet extends MVCPortlet {
         String terminationReason = ParamUtil.getString(actionRequest, "terminationReason");
         String terminationCode = ParamUtil.getString(actionRequest, "terminationCode");
         String formerBranch = ParamUtil.getString(actionRequest, "formerBranch");
-        
         //New fileds 
         String contractId = ParamUtil.getString(actionRequest, "contractId");
         String entityId = ParamUtil.getString(actionRequest, "entityId");
@@ -150,7 +153,11 @@ public class ReinstatePortlet extends MVCPortlet {
         String terminationReason = ParamUtil.getString(actionRequest, "terminationReason", GetterUtil.DEFAULT_STRING);
         String terminationCode = ParamUtil.getString(actionRequest, "terminationCode", GetterUtil.DEFAULT_STRING);
         String formerBranch = ParamUtil.getString(actionRequest, "formerBranch", GetterUtil.DEFAULT_STRING);
+        ///approval 1st
+        String firstapprover = ParamUtil.getString(actionRequest, "firstapprover", GetterUtil.DEFAULT_STRING);
         
+        //second approver
+        String secondapprover = ParamUtil.getString(actionRequest, "secondapprover", GetterUtil.DEFAULT_STRING);
         
         Reinstatement reinstatement = null;
         try {
@@ -168,10 +175,18 @@ public class ReinstatePortlet extends MVCPortlet {
             reinstatement.setTerminationCode(terminationCode);
             reinstatement.setFormerBranch(formerBranch);
             
+            //first approver
+            reinstatement.setFirstapprover(firstapprover);
+            
+            //Second approver
+            reinstatement.setSecondapprover(secondapprover);
+            
             
             reinstatementLocalService.updateReinstatement(reinstatement);
         }
     }
+	
+	//
 	
 	//Deletehyo 
     @ProcessAction(name = "deleteReinstatement")
