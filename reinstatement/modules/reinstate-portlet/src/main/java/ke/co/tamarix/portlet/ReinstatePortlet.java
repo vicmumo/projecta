@@ -70,12 +70,12 @@ public class ReinstatePortlet extends MVCPortlet {
         renderRequest.setAttribute("reinstatementList", reinstatementList);
         //this is the one for first-stage-validated.jsp
         List<Reinstatement> firstvalidatedList1 = reinstatementLocalService.getReinstatements(QueryUtil.ALL_POS, QueryUtil.ALL_POS);
-        renderRequest.setAttribute("firstvalidatedList1", firstvalidatedList1);//sijui kama ina make sense ata.
+        renderRequest.setAttribute("firstvalidatedList1", firstvalidatedList1);//a list for the first validations/approvals in level 1.
 			super.render(renderRequest, renderResponse);
 		}
 	
 	
-	//Add
+	//Add record
 	@ProcessAction(name = "addReinstatement")
     public void addReinstatement(ActionRequest actionRequest,ActionResponse actionResponse) {
         long reinstatementId = counterLocalService.increment(Reinstatement.class.getName());
@@ -188,7 +188,7 @@ public class ReinstatePortlet extends MVCPortlet {
 	
 	//
 	
-	//Deletehyo 
+	//Delete
     @ProcessAction(name = "deleteReinstatement")
     public void deleteReinstatement(ActionRequest actionRequest, ActionResponse actionResponse){
         long reinstatementId = ParamUtil.getLong(actionRequest, "reinstatementId", GetterUtil.DEFAULT_LONG);
